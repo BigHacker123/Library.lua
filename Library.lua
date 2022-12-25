@@ -2223,7 +2223,7 @@ do
     });
 
     local WatermarkLabel = Library:CreateLabel2({
-        Position = UDim2.new(0, 5, 0, 0);
+        Position = UDim2.new(0, 4, 0, 0);
         Size = UDim2.new(1, -4, 1, 0);
         TextSize = 14;
         RichText = true;
@@ -2265,7 +2265,7 @@ do
     local ColorFrame = Library:Create('Frame', {
         BackgroundColor3 = Library.AccentColor;
         BorderSizePixel = 0;
-        Size = UDim2.new(1, 0, 0, 1);
+        Size = UDim2.new(1, 0, 0, 2);
         ZIndex = 102;
         Parent = KeybindInner;
     });
