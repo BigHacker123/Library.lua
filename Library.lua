@@ -858,7 +858,7 @@ do
                 end;
             end;
 
-            Library.KeybindFrame.Size = UDim2.new(0, math.max(XSize + 10, 200), 0, YSize + 23)
+            Library.KeybindFrame.Size = UDim2.new(0, math.max(XSize + 10, 180), 0, YSize + 23)
         end;
 
         function KeyPicker:GetState()
