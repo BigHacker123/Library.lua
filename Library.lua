@@ -2173,6 +2173,8 @@ do
         Parent = Library.NotificationArea;
     });
 
+
+
     local WatermarkOuter = Library:Create('Frame', {
         BorderColor3 = Color3.new(0, 0, 0);
         Position = UDim2.new(0, 100, 0, -25);
@@ -2204,29 +2206,19 @@ do
         Parent = WatermarkInner;
     });
 
-    local Gradient = Library:Create('UIGradient', {
+    Library:Create('UIGradient', {
         Color = ColorSequence.new({
-            ColorSequenceKeypoint.new(0, Library:GetDarkerColor(Library.MainColor)),
-            ColorSequenceKeypoint.new(1, Library.MainColor),
+            ColorSequenceKeypoint.new(0, Color3.fromRGB(27, 27, 27)),
+            ColorSequenceKeypoint.new(1, Color3.fromRGB(52, 52, 52))
         });
         Rotation = -90;
         Parent = InnerFrame;
     });
 
-    Library:AddToRegistry(Gradient, {
-        Color = function()
-            return ColorSequence.new({
-                ColorSequenceKeypoint.new(0, Library:GetDarkerColor(Library.MainColor)),
-                ColorSequenceKeypoint.new(1, Library.MainColor),
-            });
-        end
-    });
-
-    local WatermarkLabel = Library:CreateLabel2({
-        Position = UDim2.new(0, 5, 0, 0);
+    local WatermarkLabel = Library:CreateLabel({
+        Position = UDim2.new(0, 4, 0, 0);
         Size = UDim2.new(1, -4, 1, 0);
         TextSize = 14;
-        RichText = true;
         TextXAlignment = Enum.TextXAlignment.Left;
         ZIndex = 203;
         Parent = InnerFrame;
