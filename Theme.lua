@@ -12,7 +12,7 @@ local ThemeManager = {} do
 		['Kiriot Hub'] 		= { 5, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"30333b","AccentColor":"ffaa00","BackgroundColor":"1a1c20","OutlineColor":"141414"}') },
 		['Fatality'] 		= { 6, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"1e1842","AccentColor":"c50754","BackgroundColor":"191335","OutlineColor":"3c355d"}') },
 		['GameSense'] 		= { 7, httpService:JSONDecode('{"FontColor":"919191","MainColor":"101010","AccentColor":"9CB819","BackgroundColor":"111111","OutlineColor":"2D2D2D"}') },
-		['Tokyo Night'] 	= { 8, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"191925","AccentColor":"6759b3","BackgroundColor":"16161f","OutlineColor":"323232"}') },
+		['Blackout'] 	= { 8, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"212121","AccentColor":"ffffff","BackgroundColor":"101010","OutlineColor":"0f0f0f"}') },
 	}
 
 	function ThemeManager:ApplyTheme(theme)
