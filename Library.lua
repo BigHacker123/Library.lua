@@ -1,4 +1,4 @@
---Library Fix
+-- Rewrite | beamed.solutions | https://discord.gg/beamedsolutions
 
 local InputService = game:GetService('UserInputService');
 local TextService = game:GetService('TextService');
