@@ -1,3 +1,5 @@
+--// Linoria Rewrite!
+
 local InputService = game:GetService('UserInputService');
 local TextService = game:GetService('TextService');
 local TweenService = game:GetService('TweenService');
@@ -11,9 +13,10 @@ local Mouse = LocalPlayer:GetMouse();
 local ProtectGui = protectgui or (syn and syn.protect_gui) or (function() end);
 
 local ScreenGui = Instance.new('ScreenGui');
+ProtectGui(ScreenGui);
 
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Global;
-ScreenGui.Parent = LocalPlayer.PlayerGui.UI;
+ScreenGui.Parent = CoreGui;
 
 local Toggles = {};
 local Options = {};
