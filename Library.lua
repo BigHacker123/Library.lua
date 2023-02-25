@@ -92,7 +92,7 @@ function Library:CreateLabel(Properties, IsHud)
         BackgroundTransparency = 1;
         Font = Enum.Font.Code;
         TextColor3 = Library.FontColor or Library.AccentColor;
-        TextSize = 16;
+        TextSize = 14;
         TextStrokeTransparency = 0;
     });
 
