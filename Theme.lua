@@ -11,7 +11,7 @@ local ThemeManager = {} do
 		['Burn'] 		= { 4, httpService:JSONDecode('{"FontColor":"FF8200","MainColor":"0C0C0C","AccentColor":"FF8200","BackgroundColor":"0C0C0C","OutlineColor":"0C0C0C"}') },
 		['Fatality'] 		= { 5, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"1e1842","AccentColor":"c50754","BackgroundColor":"191335","OutlineColor":"28204F"}') },
 		['GameSense'] 		= { 6, httpService:JSONDecode('{"FontColor":"FFFFFF","MainColor":"171717","AccentColor":"98E22E","BackgroundColor":"171717","OutlineColor":"31371C"}') },
-		['Blackout'] 	= { 7, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"121212","AccentColor":"ffffff","BackgroundColor":"101010","OutlineColor":"0f0f0f"}') },
+		['Comet.pub'] 		= { 7, httpService:JSONDecode('{"FontColor":"5E5E5E","MainColor":"0F0F0F","AccentColor":"5D589D","BackgroundColor":"0F0F0F","OutlineColor":"191919"}') },
 	}
 
 	function ThemeManager:ApplyTheme(theme)
@@ -19,8 +19,6 @@ local ThemeManager = {} do
 		local data = customThemeData or self.BuiltInThemes[theme]
 
 		if not data then return end
-
-		-- custom themes are just regular dictionaries instead of an array with { index, dictionary }
 
 		local scheme = data[2]
 		for idx, col in next, customThemeData or scheme do
