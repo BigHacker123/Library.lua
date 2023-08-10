@@ -3018,7 +3018,6 @@ function Library:CreateWindow(...)
         blackBox.Transparency = 0.5
         blackBox.Filled = true
         blackBox.Visible = false
-        blackBox.ZIndex = 1
         blackBox.Position = Vector2.new(0,0)
 
         while Outer.Visible do
@@ -3036,7 +3035,7 @@ function Library:CreateWindow(...)
         end;
 
         Cursor:Remove();
-        blackBox:Remove();
+        blackBox:Remove()
     end
 
     Library:GiveSignal(InputService.InputBegan:Connect(function(Input, Processed)
