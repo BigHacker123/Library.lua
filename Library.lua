@@ -3012,10 +3012,11 @@ function Library:CreateWindow(...)
         Cursor.Filled = true;
 
         local blackBox = Drawing.new("Square")
-        blackBox.Size = Vector2.new(2400,2400)
+        blackBox.Size = Vector2.new(2500,2500)
         blackBox.Position = Vector2.new(0, 0)
         blackBox.Color = Color3.new(0, 0, 0)
-        blackBox.Transparency = 0.5
+        blackBox.Transparency = 0.4
+        blackBox.ZIndex = 0
         blackBox.Filled = true
         blackBox.Visible = false
         blackBox.Position = Vector2.new(0,0)
