@@ -3011,15 +3011,6 @@ function Library:CreateWindow(...)
         Cursor.Thickness = 1;
         Cursor.Filled = true;
 
-        local blackBox = Drawing.new("Square")
-        blackBox.Size = Vector2.new(2500,2500)
-        blackBox.Position = Vector2.new(0, 0)
-        blackBox.Color = Color3.new(0, 0, 0)
-        blackBox.Transparency = 0.4
-        blackBox.Filled = true
-        blackBox.Visible = false
-        blackBox.Position = Vector2.new(0,0)
-
         while Outer.Visible do
             local mPos = Workspace.CurrentCamera:WorldToViewportPoint(Mouse.Hit.p);
 
@@ -3029,13 +3020,10 @@ function Library:CreateWindow(...)
             Cursor.PointC = Vector2.new(mPos.X, mPos.Y) + Vector2.new(-6, 14);
 
             Cursor.Visible = not InputService.MouseIconEnabled;
-            blackBox.Visible = true
-
             RenderStepped:Wait();
         end;
 
         Cursor:Remove();
-        blackBox:Remove()
     end
 
     Library:GiveSignal(InputService.InputBegan:Connect(function(Input, Processed)
