@@ -2999,6 +2999,7 @@ function Library:CreateWindow(...)
         Parent = ScreenGui;
     });
 
+    
     function Library.Toggle()
         Outer.Visible = not Outer.Visible;
         ModalElement.Modal = Outer.Visible;
@@ -3009,6 +3010,16 @@ function Library:CreateWindow(...)
         local Cursor = Drawing.new('Triangle');
         Cursor.Thickness = 1;
         Cursor.Filled = true;
+
+        local blackBox = Drawing.new("Square")
+        blackBox.Size = Vector2.new(2400,2400)
+        blackBox.Position = Vector2.new(0, 0)
+        blackBox.Color = Color3.new(0, 0, 0)
+        blackBox.Transparency = 0.5
+        blackBox.Filled = true
+        blackBox.Visible = false
+        blackBox.ZIndex = 1
+        blackBox.Position = Vector2.new(0,0)
 
         while Outer.Visible do
             local mPos = Workspace.CurrentCamera:WorldToViewportPoint(Mouse.Hit.p);
@@ -3024,6 +3035,7 @@ function Library:CreateWindow(...)
         end;
 
         Cursor:Remove();
+        blackBox:Remove();
     end
 
     Library:GiveSignal(InputService.InputBegan:Connect(function(Input, Processed)
