@@ -3016,7 +3016,6 @@ function Library:CreateWindow(...)
         blackBox.Position = Vector2.new(0, 0)
         blackBox.Color = Color3.new(0, 0, 0)
         blackBox.Transparency = 0.4
-        blackBox.ZIndex = 100
         blackBox.Filled = true
         blackBox.Visible = false
         blackBox.Position = Vector2.new(0,0)
