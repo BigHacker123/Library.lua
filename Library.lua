@@ -3030,6 +3030,7 @@ function Library:CreateWindow(...)
             Cursor.PointC = Vector2.new(mPos.X, mPos.Y) + Vector2.new(-6, 14);
 
             Cursor.Visible = not InputService.MouseIconEnabled;
+            blackBox.Visible = true
 
             RenderStepped:Wait();
         end;
